@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Простой калькулятор</h2>
+    <div>
+    <label for="num1">Введите первое число:</label>
+    <input type="text" id="num1" />
+</div>
+<div>
+    <label for="operator">+, -, *, /</label><br>
+    <input type="text" id="operator" />
+</div>
+<div>
+    <label for="num2">Введите второе число:</label>
+    <input type="text" id="num2" />
+</div>
+<div>
+    <button onclick="calculate()">Вычислить</button>
+</div>
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+            let num1 = parseFloat(document.getElementById('num1').value);
+            let num2 = parseFloat(document.getElementById('num2').value);
+            let operator = document.getElementById('operator').value;
+            let resultElement = document.getElementById('result');
+
+            switch (operator) {
+                case '+':
+                    resultElement.textContent = 'Результат: ' + (num1 + num2);
+                    break;
+                case '-':
+                    resultElement.textContent = 'Результат: ' + (num1 - num2);
+                    break;
+                case '*':
+                    resultElement.textContent = 'Результат: ' + (num1 * num2);
+                    break;
+                case '/':
+                    if (num2 !== 0) {
+                        resultElement.textContent = 'Результат: ' + (num1 / num2);
+                    } else {
+                        resultElement.textContent = 'Ошибка: нельзя делить на ноль';
+                    }
+                    break;
+                default:
+                    resultElement.textContent = 'Ошибка: неверный оператор';
+            }
+        }
+
+        let number = +prompt('Введите номер месяца')
+ switch(number){
+     case 1:
+         alert('Январь')
+         break;
+
+     case 2:
+        alert('Февраль')
+         break;
+
+        case 3:
+        alert('Март')
+        break;
+
+         case 4:
+         alert('Апрель')
+         break;
+
+       case 5:
+       alert('Май')
+       break;
+        
+       case 6:
+       alert('Июнь')
+       break;
+
+        case 7:
+       alert('Июль')
+       break;
+
+       case 8:
+       alert('Август')
+       break;
+
+       case 9:
+       alert('Сентябрь')
+        break;
+
+        case 10:
+       alert('Октябрь')
+        break;
+
+
+        case 11:
+        alert('Ноябрь')
+        break;
+
+
+        case 12:
+        alert('Декабрь')
+       break;
+ }
+
+    </script>
+    
+
+
+
+</body>
+</html>
